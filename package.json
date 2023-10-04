@@ -1,0 +1,18 @@
+{
+  "name": "ecommerce-nest-next-react-mysql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install": "npx concurrently --kill-others-on-fail \"npm:install:*\"",
+    "dev": "npx concurrently --kill-others-on-fail \"npm:dev:*\"",
+    "install:client": "cd client-next && pnpm i",
+    "install:be": "cd be-nest && pnpm i",
+    "install:admin": "cd admin-reactjs && pnpm i",
+    "dev:client": "cd client-next && pnpm run dev",
+    "dev:be": "cd be-nest && pnpm run start:dev",
+    "dev:admin": "cd admin-reactjs && pnpm run start"
+  },
+  "author": "",
+  "license": "ISC"
+}

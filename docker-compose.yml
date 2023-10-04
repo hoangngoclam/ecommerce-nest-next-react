@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  mysql:
+    image: 'mysql:5.7.34'
+    platform: linux/x86_64
+    restart: always
+    volumes:
+      - ./.docker/mysql:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: 'hello'
+
+  phpmyadmin:
+    image: phpmyadmin:latest
+    restart: always
+    ports:
+      - 8080:80
+    environment:
+      - PMA_ARBITRARY=1
+  
