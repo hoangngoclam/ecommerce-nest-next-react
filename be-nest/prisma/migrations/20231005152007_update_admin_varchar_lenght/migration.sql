@@ -1,0 +1,3 @@
+-- AlterTable
+ALTER TABLE `Admin` MODIFY `email` VARCHAR(300) NOT NULL,
+    MODIFY `password` VARCHAR(300) NOT NULL;
